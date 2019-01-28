@@ -1,4 +1,8 @@
 defmodule ScrewsFactory do
+  #
+  #  ScrewsFactory.run(Enum.take(Stream.cycle(["-"]), 100))
+  #
+
   def run(pieces) do
     pieces
     |> Stream.chunk(50)

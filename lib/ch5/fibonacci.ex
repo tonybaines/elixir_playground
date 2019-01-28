@@ -1,10 +1,10 @@
 defmodule Fibonacci do
-  @moduledoc false
 
-  def of(0) do
-    0 end
+  def of(0), do: 0
 
   def of(i) do
-    i + of(i - 1)
+    Stream.iterate(1, &(&1 + 1))
+    |> Enum.take(i)
+    |> Enum.reduce(&(&1+ &2))
   end
 end
